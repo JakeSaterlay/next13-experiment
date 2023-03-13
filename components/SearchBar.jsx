@@ -2,8 +2,13 @@
 
 export default function SearchBar(props) {
   return (
-    <div>
-      <input className="border border-white-300" onChange={props.onChange} />
+    <div className="p-10">
+      <input
+        placeholder="Search..."
+        type="search"
+        className="p-4 text-black"
+        onChange={props.onChange}
+      />
     </div>
   );
 }
