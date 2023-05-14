@@ -1,5 +1,6 @@
 import Movies from "@/components/Movies";
 import SearchBar from "@/components/SearchBar";
+import ServerComponent from "./ServerComponent";
 
 export default async function Home() {
   const data = await fetch(
@@ -9,6 +10,7 @@ export default async function Home() {
   return (
     <main>
       <div>
+        <ServerComponent />
         <SearchBar />
         <Movies movies={res.results} />
       </div>

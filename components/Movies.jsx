@@ -1,22 +1,22 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import Movie from "@/app/movie";
+import Movie from "@/components/movie";
 
 export default function Movies(props) {
   const searchParams = useSearchParams();
   const search = searchParams.get("search");
 
-  const filteredMovies = props.movies
-    .filter((x) => x.title.toLowerCase().includes(search.toLowerCase()))
-    .map((movie) => (
-      <Movie
-        key={movie.id}
-        id={movie.id}
-        title={movie.title}
-        poster_path={movie.poster_path}
-        release_date={movie.release_date}
-      />
-    ));
+  // const filteredMovies = props.movies
+  //   .filter((x) => x.title.toLowerCase().includes(search.toLowerCase()))
+  //   .map((movie) => (
+  //     <Movie
+  //       key={movie.id}
+  //       id={movie.id}
+  //       title={movie.title}
+  //       poster_path={movie.poster_path}
+  //       release_date={movie.release_date}
+  //     />
+  //   ));
 
   return (
     <div>
